@@ -7,19 +7,34 @@ namespace swapcase
     {
         static void Main()
         {
-            Console.Write("Enter the string of A: ");
-            int a = Convert.ToInt32(Console.ReadLine());
+            
+
+            Console.WriteLine("Enter the first number:");
+            int firstNumber = Convert.ToInt32(Console.ReadLine());
+            
+
+            Console.WriteLine("Enter the second number:");
+            int secondNumber = Convert.ToInt32(Console.ReadLine());
+            
+            Console.WriteLine("Enter the third number:");
+            int thirdNumber = Convert.ToInt32(Console.ReadLine());
+            
 
 
-            Console.Write("Enter the string of b: ");
-            int b = Convert.ToInt32(Console.ReadLine());
+            if (firstNumber > secondNumber && firstNumber > thirdNumber)
+            {
+                Console.WriteLine($"The largest number is: {firstNumber}");
+            }
+            else if (secondNumber > firstNumber && secondNumber > thirdNumber)
+            {
+                Console.WriteLine($"The largest number is: {secondNumber}");
+            }
+            else
+            {
+                Console.WriteLine($"The largest number is:  {thirdNumber}");
+            }
 
-            int c;
-            c = a;
-            a = b;
-            b = c;
 
-            Console.WriteLine($"Swapped numbers: {a} : {b}");
         }
     }
 }
