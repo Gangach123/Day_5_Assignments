@@ -1,23 +1,36 @@
 ﻿using System;
-namespace problems
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace primeFactors
 {
-     class Program
+    class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.Write("Input the number of terms : ");
-            int n = Convert.ToInt32(Console.ReadLine());
+            //For entering number
+            Console.WriteLine("Please enter your number: ");
+            int a = int.Parse(Console.ReadLine());
 
-            int i = 1;
-            double s = 0.0;
+            int num = a;
 
-            for (i = 1; i <= n; i++)
+            //Inintializing the factor value i with one
+            int fact = 1;
+
+            //To store the prime factors in empty list
+            string primeString = "";
+
+            while (++fact <= num)
             {
-                Console.Write("1/{0} + ", i);
-                s += 1 / (float)i;
-            }
-            Console.Write("Sum of Series upto {0} terms : {1} ", n, s);
+                //If the factor devides the number add the factor to the empty list
+                primeString += (num % fact == 0) ? " " + fact : "";
 
+                //Devide out the test factor until you are unable to do so
+                while (num % fact == 0) num /= fact;
+            }
+            Console.WriteLine("Factors of " + a + " are" + primeString);
         }
     }
 }
