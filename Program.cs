@@ -5,7 +5,12 @@ namespace problems
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to the Day_5_Assignments");
+           
+            Console.Write("Enter the number: ");
+            //VARIABLES
+            int number = Convert.ToInt32(Console.ReadLine());
+            string result = number % 2 == 0 ? "Number is even" : "Number is odd";
+            Console.WriteLine(result);
         }
     }
 }
