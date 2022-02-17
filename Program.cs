@@ -1,16 +1,28 @@
 ﻿using System;
 namespace problems
 {
-    static class flipCoin
+     class Program
     {
         static void Main(string[] args)
         {
-           
-            Console.Write("Enter the number: ");
-            //VARIABLES
-            int number = Convert.ToInt32(Console.ReadLine());
-            string result = number % 2 == 0 ? "Number is even" : "Number is odd";
-            Console.WriteLine(result);
+            char firststring;
+            Console.WriteLine("Enter any character: ");
+            firststring = Convert.ToChar(Console.ReadLine());
+
+
+            //Checking for vowel
+            if (firststring == 'a' || firststring == 'e' || firststring == 'i' || firststring == 'o' || firststring == 'u' || firststring == 'A' || firststring == 'E' || firststring == 'I' || firststring == 'O' || firststring == 'U')
+            {
+
+                Console.WriteLine($"Entered character is a vowel: {firststring} ");
+
+            }
+            else
+            {
+                Console.WriteLine($"Entered character is a consonant: {firststring} ");
+            }
+            Console.ReadLine();
+
         }
     }
 }
