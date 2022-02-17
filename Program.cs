@@ -1,36 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace primeFactors
+
+namespace swapcase
 {
     class Program
     {
         static void Main()
         {
-            //For entering number
-            Console.WriteLine("Please enter your number: ");
-            int a = int.Parse(Console.ReadLine());
+            Console.Write("Enter the string of A: ");
+            int a = Convert.ToInt32(Console.ReadLine());
 
-            int num = a;
 
-            //Inintializing the factor value i with one
-            int fact = 1;
+            Console.Write("Enter the string of b: ");
+            int b = Convert.ToInt32(Console.ReadLine());
 
-            //To store the prime factors in empty list
-            string primeString = "";
+            int c;
+            c = a;
+            a = b;
+            b = c;
 
-            while (++fact <= num)
-            {
-                //If the factor devides the number add the factor to the empty list
-                primeString += (num % fact == 0) ? " " + fact : "";
-
-                //Devide out the test factor until you are unable to do so
-                while (num % fact == 0) num /= fact;
-            }
-            Console.WriteLine("Factors of " + a + " are" + primeString);
+            Console.WriteLine($"Swapped numbers: {a} : {b}");
         }
     }
 }
