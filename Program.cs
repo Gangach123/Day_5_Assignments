@@ -5,23 +5,18 @@ namespace problems
     {
         static void Main(string[] args)
         {
-            char firststring;
-            Console.WriteLine("Enter any character: ");
-            firststring = Convert.ToChar(Console.ReadLine());
+            Console.Write("Input the number of terms : ");
+            int n = Convert.ToInt32(Console.ReadLine());
 
+            int i = 1;
+            double s = 0.0;
 
-            //Checking for vowel
-            if (firststring == 'a' || firststring == 'e' || firststring == 'i' || firststring == 'o' || firststring == 'u' || firststring == 'A' || firststring == 'E' || firststring == 'I' || firststring == 'O' || firststring == 'U')
+            for (i = 1; i <= n; i++)
             {
-
-                Console.WriteLine($"Entered character is a vowel: {firststring} ");
-
+                Console.Write("1/{0} + ", i);
+                s += 1 / (float)i;
             }
-            else
-            {
-                Console.WriteLine($"Entered character is a consonant: {firststring} ");
-            }
-            Console.ReadLine();
+            Console.Write("Sum of Series upto {0} terms : {1} ", n, s);
 
         }
     }
