@@ -15,6 +15,7 @@ namespace power_Of_2
                 Console.WriteLine(powerOf);
                 
             }
+           Console.ReadLine();
         }
     }
 }
