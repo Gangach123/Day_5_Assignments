@@ -1,7 +1,7 @@
 ﻿using System;
 namespace leap_Year
 {
-    static class LeapYear
+    class LeapYear
     {
         static void Main()
         {
