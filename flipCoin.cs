@@ -26,8 +26,8 @@ namespace problems
                 }
                 value++;
             }
-            Console.WriteLine($"Percentage of head is {(TAIL * 100) /a}");
             Console.WriteLine($"Percentage of head is {(HEAD * 100) / a}");
+            Console.WriteLine($"Percentage of head is {(TAIL * 100) /a}");
         }
     }
 }
