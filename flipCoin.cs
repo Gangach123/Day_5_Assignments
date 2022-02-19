@@ -16,7 +16,7 @@ namespace problems
                 Random randomNumber = new Random();
                 double number = randomNumber.NextDouble();
                 Console.WriteLine(number);
-                if (number < 0.5)
+                if (number > 0.5)
                 {
                     HEAD++;
                 }
