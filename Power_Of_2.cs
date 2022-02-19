@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 namespace power_Of_2
 {
-    static class Power_Of_2
+     class Power_Of_2
     {
         static void Main()
         {
